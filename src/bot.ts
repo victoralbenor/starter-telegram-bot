@@ -122,7 +122,7 @@ const roll_phrases = [
 bot.command("roll", (ctx) => {
   const chatId = ctx.chat.id;
   const roll = random.int(1, 20);
-  ctx.reply(chatId, "🚕" + roll_phrases[roll - 1])
+  ctx.reply(`🚕 ${roll_phrases[roll - 1]}`)
 });
 
 
