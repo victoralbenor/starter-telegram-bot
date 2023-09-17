@@ -196,6 +196,7 @@ bot.api.setMyCommands([
     command: "effect",
     description: "Apply text effects on the text. (usage: /effect [text])",
   },
+  {command: "roll", description: "rola"},
 ]);
 
 // Handle all other messages and the /start command
