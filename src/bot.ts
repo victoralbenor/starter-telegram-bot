@@ -5,10 +5,16 @@ import { applyTextEffect, Variant } from "./textEffects";
 
 import type { Variant as TextEffectVariant } from "./textEffects";
 
+const crypto = require('crypto');
+
+function randomInt(min : number, max : number) {
+  const randomBytes = crypto.randomBytes(4);
+  const randomNumber = randomBytes.readUInt32BE(0);
+  return min + (randomNumber % (max - min + 1));
+}
+
 // Create a bot using the Telegram token
 const bot = new Bot(process.env.TELEGRAM_TOKEN || "");
-
-//import random from "random";
 
 // Handle the /yo command to greet the user
 bot.command("yo", (ctx) => ctx.reply(`Yo ${ctx.from?.username}`));
@@ -119,11 +125,10 @@ const roll_phrases = [
 "(20) Benção do Carrara: Hoje é um dia abençoado! Aproveite o equilíbrio, a paz e a harmonia que este dia lhe traz, como quando o Agostinho passa um dia sem se meter em ciladas."
 ];
 
-// bot.command("roll", (ctx) => {
-//   const chatId = ctx.chat.id;
-//   const roll = random.int(1, 20);
-//   ctx.reply(`🚕 ${roll_phrases[roll - 1]}`)
-// });
+bot.command("roll", (ctx) => {
+  const roll = randomInt(1, 20);
+  ctx.reply(`🚕 ${roll_phrases[roll - 1]}`)
+});
 
 
 // Handle inline queries
