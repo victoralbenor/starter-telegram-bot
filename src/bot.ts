@@ -127,8 +127,7 @@ const roll_phrases = [
 
 bot.command("roll", (ctx) => {
   const roll = randomInt(1, 20);
-  //ctx.reply(`🚕 ${roll_phrases[roll - 1]}`)
-  ctx.reply(`fodas vai tomar no cu`)
+  ctx.reply(`🚕 ${roll_phrases[roll - 1]}`)
 });
 
 
