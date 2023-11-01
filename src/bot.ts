@@ -131,6 +131,11 @@ bot.command("roll", (ctx) => {
 });
 
 
+bot.command("rollberto", (ctx) => {
+  const roll = randomInt(1, 20);
+  ctx.reply(`🚕 ${roll_phrases[roll - 1]}`)
+});
+
 // Handle inline queries
 const queryRegEx = /effect (monospace|bold|italic) (.*)/;
 bot.inlineQuery(queryRegEx, async (ctx) => {
@@ -196,12 +201,8 @@ const aboutUrlKeyboard = new InlineKeyboard().url(
 
 // Suggest commands in the menu
 bot.api.setMyCommands([
-  { command: "yo", description: "Be greeted by the bot" },
-  {
-    command: "effect",
-    description: "Apply text effects on the text. (usage: /effect [text])",
-  },
   { command: "roll", description: "rola" },
+  { command: "rollberto", description: "rola e comemora" }
 ]);
 
 // Start the server
