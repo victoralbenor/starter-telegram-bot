@@ -83,7 +83,7 @@ bot.command("calibra", (ctx) => {
 
   const average = sum / 50;
 
-  ctx.reply(`Calibrô:\n\`\`\`${rolls.join(', ')}\`\`\`\nAverage: ${average.toFixed(2)}`, { parse_mode: 'Markdown' });
+  ctx.reply(`\`\`\`Calibrô:\n${rolls.join(', ')}\`\`\`\nAverage: ${average.toFixed(2)}`, { parse_mode: 'Markdown' });
 });
 
 // Suggest commands in the menu
