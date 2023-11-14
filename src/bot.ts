@@ -71,9 +71,22 @@ bot.command("roll", (ctx) => {
   ctx.reply(`🎅 ${roll_phrases[roll - 1]}`)
 });
 
+bot.command("calibra", (ctx) => {
+  let sum = 0;
+  
+  for (let i = 0; i < 50; i++) {
+    const roll = randomInt(1, 20);
+    sum += roll;
+  }
+
+  const average = sum / 50;
+  ctx.reply(`Average: ${average.toFixed(2)}`);
+});
+
 // Suggest commands in the menu
 bot.api.setMyCommands([
-  { command: "roll", description: "rola" },
+  { command: "roll", description: "tenta a sorte" },
+  { command: "calibra", description: "calibra nois" },
 ]);
 
 // Start the server
