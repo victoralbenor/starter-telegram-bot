@@ -71,20 +71,20 @@ bot.command("roll", (ctx) => {
   ctx.reply(`🎅 ${roll_phrases[roll - 1]}`)
 });
 
-bot.command("calibrate", (ctx) => {
+bot.command("calibra", (ctx) => {
   let sum = 0;
   let rolls = [];
   
   for (let i = 0; i < 50; i++) {
     const roll = randomInt(1, 20);
     sum += roll;
-    rolls.push(`Roll ${i+1}: ${roll}`);
+    rolls.push(roll);
   }
 
   const average = sum / 50;
   rolls.push(`Average: ${average.toFixed(2)}`);
 
-  ctx.reply(`\`\`\`${rolls.join('\n')}\`\`\``, { parse_mode: 'Markdown' });
+  ctx.reply(`\`\`\`${rolls.join(', ')}\`\`\``, { parse_mode: 'Markdown' });
 });
 
 // Suggest commands in the menu
