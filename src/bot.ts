@@ -41,7 +41,7 @@ const roll_phrases = [
 ];
 */
 
-// November 2023
+/* November 2023
 const roll_phrases = [
   "(1) Despertar Congelado: Hoje parece que você acordou com o pé esquerdo, como quando o Papai Noel se atrasa na véspera de Natal. Prepare-se para superar obstáculos!",
   "(2) Nevasca Imprevista: O azar bateu à sua porta, como uma tempestade de neve inesperada no Polo Norte, dificultando a saída do trenó do Papai Noel.",
@@ -64,6 +64,32 @@ const roll_phrases = [
   "(19) Festa de Natal Vitoriosa: Um dia de conquistas, como finalizar com sucesso todos os preparativos natalinos.",
   "(20) Harmonia Natalina Absoluta: Um dia abençoado, cheio de paz, harmonia e alegria, como um Natal perfeito em família."
 ];
+*/
+
+// January 2023
+const roll_phrases = [
+  "(1) Novo Começo: Hoje parece um novo começo, assim como o início de um novo ano. Prepare-se para superar obstáculos!",
+  "(2) Fogos Inesperados: A sorte bateu à sua porta, como uma surpreendente queima de fogos na véspera de Ano Novo, tornando sua jornada emocionante.",
+  "(3) Metas Confusas: O dia será tão confuso quanto fazer uma longa lista de resoluções de Ano Novo, tentando agradar a todos.",
+  "(4) Decorações Desenroladas: Hoje, você está tão perdido quanto alguém tentando desenrolar as decorações de Ano Novo.",
+  "(5) Contagem Regressiva para o Sucesso: O dia está tão agitado quanto as compras de presentes de última hora de Ano Novo, tentando agradar a todos sem esquecer ninguém.",
+  "(6) Desafio do Banquete de Ano Novo: Como um chef estressado preparando um banquete de Ano Novo, hoje você enfrentará desafios e precisará manter a calma.",
+  "(7) Reflexão de Ano Novo: O dia pede uma pausa para refletir, talvez com um chocolate quente perto da lareira.",
+  "(8) Troca de Resoluções Arriscada: Um dia para fazer escolhas, mas cuidado para não acabar com uma troca de resoluções desastrosa.",
+  "(9) Surpresa de Ano Novo: Um dia neutro com surpresas inesperadas, como encontrar um presente escondido sob a árvore de Ano Novo.",
+  "(10) Criatividade de Ano Novo: Um dia comum, mas perfeito para inovar na decoração ou nos preparativos de Ano Novo.",
+  "(11) Espírito de Ano Novo Astuto: Um bom dia para manter a calma e curtir o espírito de Ano Novo com astúcia.",
+  "(12) Paz de Ano Novo: Hoje você pode encontrar a paz e a tranquilidade do Ano Novo, como um jantar harmonioso em família.",
+  "(13) Bênção do Espírito de Ano Novo: Um dia cheio de sorte e alegria, como acordar e encontrar exatamente o que desejava sob a árvore de Ano Novo.",
+  "(14) Sorte na Neve: Espere por mudanças positivas, como uma agradável surpresa no calendário de advento de Ano Novo.",
+  "(15) Inspiração de Ano Novo: Um dia para ser criativo e alegre, como criar uma nova tradição de Ano Novo em família.",
+  "(16) Aventura no Inverno: Prepare-se para uma aventura positiva, talvez um passeio inesperado para ver as luzes de Ano Novo.",
+  "(17) Contratempo na Véspera de Ano Novo: Esteja preparado para qualquer contingência, como uma queda de energia durante o jantar de Ano Novo!",
+  "(18) Dia de Neve com Sorte: Como acordar com a notícia de um dia de neve, espere um dia cheio de surpresas e alegrias.",
+  "(19) Festa de Ano Novo Vitoriosa: Um dia de conquistas, como completar com sucesso todos os preparativos de Ano Novo.",
+  "(20) Absoluta Harmonia de Ano Novo: Um dia abençoado, cheio de paz, harmonia e alegria, como um Ano Novo perfeito em família."
+];
+
 
 
 bot.command("roll", (ctx) => {
