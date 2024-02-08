@@ -66,7 +66,7 @@ const roll_phrases = [
 ];
 */
 
-// January 2023
+/* January 2024
 const roll_phrases = [
   "(1) Novo Começo: Hoje parece um novo começo, assim como o início de um novo ano. Prepare-se para superar obstáculos!",
   "(2) Fogos Inesperados: A sorte bateu à sua porta, como uma surpreendente queima de fogos na véspera de Ano Novo, tornando sua jornada emocionante.",
@@ -89,12 +89,35 @@ const roll_phrases = [
   "(19) Festa de Ano Novo Vitoriosa: Um dia de conquistas, como completar com sucesso todos os preparativos de Ano Novo.",
   "(20) Absoluta Harmonia de Ano Novo: Um dia abençoado, cheio de paz, harmonia e alegria, como um Ano Novo perfeito em família."
 ];
+*/
 
-
+// Carnaval 2023
+const roll_phrases = [
+  "(1) Sem lenço e sem documento: Furtaram seu celular, dinheiro, documento e você está sozinho. Aproveite este momento para refletir nas suas escolhas enquanto vai pra casa andando.",
+  "(2) Insolação moderada: Esqueceu de passar o protetor solar e agora tá todo ardido, seu pimentão do caralho",
+  "(3) Chamado da firma: Slack apitou, gerente chiou. Pause seu feriado temporariamente. Trabalhe enquanto eles festejam",
+  "(4) A caminhada da vergonha: Você decidiu ir andando pra casa depois de achar o uber muito caro no carnaval, porém no meio do caminho começou a chover muito. Aproveite esse momento para refletir sobre o porque você está trabalhando.",
+  "(5) Chuva no bloquinho: Molhou tudo, mas você tá bêbado demais pra ligar. Aproveite a lamaceira.",
+  "(6) Fantasia improvisada de última hora: Você lembrou do carnaval só na véspera e teve que improvisar uma fantasia com o que tinha em casa. Agora, está desfilando de cortina de banheiro chic. Seja o pioneiro da tendência.",
+  "(7) Glitter até na alma: Você usou tanto glitter que agora brilha mais que a própria estrela da manhã. Prepare-se para encontrar purpurina até no café da manhã de novembro.",
+  "(8) Maratona de blocos: Você decidiu seguir todos os blocos de rua em um único dia. Suas pernas estão pedindo arrego, mas seu espírito carnavalesco nunca esteve tão vivo.",
+  "(9) Conquistador(a) dos corações solitários: Você não só dançou e cantou, como também juntou casais perdidos na multidão. Cupido que se cuide, temos um novo competidor na área.",
+  "(10) Sobrevivente da bateria: Ficou tanto tempo no meio da bateria que agora considera-se um instrumento oficial. Parabéns, você alcançou a simbiose máxima com o carnaval.",
+  "(11) Encontro inesperado: No meio da folia, você reencontra aquele amigo que não via há anos. A alegria do reencontro te faz esquecer dos pés doloridos e da voz rouca.",
+  "(12) Mestre da hidratação: Você lembrou de beber água entre uma cerveja e outra. Agora, enquanto todos reclamam da ressaca, você está pronto para mais um dia de festa.",
+  "(13) Visão Perfeita de Folião: Você identifica assaltos 3 minutos antes de acontecerem, e evita todos no Carnaval.",
+  "(14) O despertar do sambista adormecido: Sem nunca ter pisado em uma escola de samba, você descobre um talento nato para o samba no pé. Agora, é só alegria e samba até o amanhecer.",
+  "(15) O guru da serenidade: Em meio ao caos do carnaval, você encontrou um oásis de paz interior. Sua calma contagia a todos ao redor, tornando-se o refúgio perfeito da folia.",
+  "(16) Detetive de fantasias: Você tem o incrível dom de adivinhar todas as fantasias, não importa quão obscuras elas sejam. Seu conhecimento pop é sua super arma.",
+  "(17) Maldição do carnaval: Passe da sexta até a quarta 12h com o matias e sem acesso a internet.",
+  "(18) O diplomata da festa: Conseguiu apaziguar todos os ânimos exaltados que encontrou pelo caminho. Graças a você, o carnaval é só amor e paz.",
+  "(19) O rei da montanha: Você conseguiu subir na banca de jornal, desviar com sucesso de todos os objetos jogados contra você e derrubar todos os inimigos que tentaram tomar o seu posto. Agora todos te reconhecem como o Rei da Montanha, meus parabéns!",
+  "(20) Benção do esquerdomacho: Você agora é um integrante do Los Hermanos. Até 00:00 do dia de hoje você é o rei do carnaval da Casa Sapucai."
+];
 
 bot.command("roll", (ctx) => {
   const roll = randomInt(1, 20);
-  ctx.reply(`🎇 ${roll_phrases[roll - 1]}`)
+  ctx.reply(`🎉 ${roll_phrases[roll - 1]}`)
 });
 
 bot.command("calibra", (ctx) => {
