@@ -135,6 +135,26 @@ bot.command("calibra", (ctx) => {
   ctx.reply(`\`\`\`Calibrô:\n${rolls.join(', ')}\`\`\`\nAverage: ${average.toFixed(2)}`, { parse_mode: 'Markdown' });
 });
 
+bot.command("bored", (ctx) => {
+  interface Activity {
+    activity: string;
+    type: string;
+    participants: number;
+  }
+
+  function fetchActivity(): Promise<Activity> {
+    return fetch('http://www.boredapi.com/api/activity/')
+      .then((response) => response.json())
+      .then((data) => {
+        return data as Activity;
+    });
+  }
+
+  fetchActivity().then((activity) => {
+    ctx.reply(`Atividade sugerida: ${activity.activity}. É uma atividade ${activity.type} para ${activity.participants} pessoas.`);
+  });
+});
+
 // Suggest commands in the menu
 bot.api.setMyCommands([
   { command: "roll", description: "tenta a sorte" },
