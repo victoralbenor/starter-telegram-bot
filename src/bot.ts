@@ -117,7 +117,7 @@ const roll_phrases = [
 ];
 
 bot.command("ctx", (ctx) => {
-  ctx.reply(ctx);
+  ctx.reply(`Teste: ${ctx}`);
 }
 
 bot.command("roll", (ctx) => {
@@ -147,17 +147,13 @@ bot.command("bored", (ctx) => {
     participants: number;
   }
 
-  function fetchActivity(): Promise<Activity> {
-    return fetch('http://www.boredapi.com/api/activity/')
-      .then((response) => response.json())
-      .then((data) => {
-        return data as Activity;
-    });
-  }
-
-  fetchActivity().then((activity) => {
-    ctx.reply(`Atividade sugerida: ${activity.activity}. É uma atividade ${activity.type} para ${activity.participants} pessoas.`);
+  fetch('http://www.boredapi.com/api/activity/')
+    .then((response) => response.json())
+    .then((data) => {
+      const act = data as Activity;
+      ctx.reply(`Atividade sugerida: ${act.activity}. É uma atividade ${act.type} para ${act.participants} pessoas.`);
   });
+
 });
 
 // Suggest commands in the menu
