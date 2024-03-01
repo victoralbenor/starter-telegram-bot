@@ -116,6 +116,10 @@ const roll_phrases = [
   "(20) Benção do esquerdomacho: Você agora é um integrante do Los Hermanos. Até 00:00 do dia de hoje você é o rei do carnaval da Casa Sapucai."
 ];
 
+bot.command("ctx", (ctx) => {
+  ctx.reply(ctx);
+}
+
 bot.command("roll", (ctx) => {
   const roll = randomInt(1, 20);
   ctx.reply(`🎉 ${roll_phrases[roll - 1]}`)
