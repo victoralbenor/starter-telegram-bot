@@ -160,6 +160,7 @@ bot.command("bored", (ctx) => {
 bot.api.setMyCommands([
   { command: "roll", description: "tenta a sorte" },
   { command: "calibra", description: "calibra nois" },
+  { command: "bored", description: "Manda uma ideia de atividade para fazer" },
 ]);
 
 // Start the server
