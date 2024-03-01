@@ -151,7 +151,9 @@ bot.command("bored", (ctx) => {
     .then((response) => response.json())
     .then((data) => {
       const act = data as Activity;
-      ctx.reply(`Atividade sugerida: ${act.activity}. É uma atividade ${act.type} para ${act.participants} pessoas.`);
+      ctx.reply(`Atividade sugerida: ${act.activity}. É uma atividade ${act.type} para ${act.participants} pessoas.`, {
+        reply_parameters: { message_id: ctx.msg.message_id },
+      });
   });
 
 });
